@@ -22,7 +22,7 @@ function initialize(){
     player=new Bird();
     pillars=[];
     score=0;
-    highScore=parseInt(localStorage.getItem("highScore"))||0;
+    highScore=parseInt(localStorage.getItem("flappy-highScore"))||0;
     let lastX=GAME_WIDTH*3/4;
     let lastGapY=GAME_HEIGHT/2;
     for(let i =0;i<5;i++)
@@ -66,7 +66,7 @@ function update()
             hitSound.play();
             player.dead=true;
             if(score>highScore){
-                localStorage.setItem("highScore",score.toString());
+                localStorage.setItem("flappy-highScore",score.toString());
             }
         }
         if(!pillars[0].granted&&pillars[0].x+pillars[0].width<player.torect().x)
