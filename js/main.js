@@ -36,7 +36,8 @@ function initialize(){
     requestedFrame=requestAnimationFrame(nextFrame);
     bgSound.play();
     bgSound.currentTime=5;
-    bgSound.volume=0.02;
+    bgSound.volume=0.2;
+    bgSound.loop=true;
 }
 
 function resize(){

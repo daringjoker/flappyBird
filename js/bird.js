@@ -34,7 +34,7 @@ class Bird{
             if(this.fallDelayCount>30){
                 this.deadFall=true;
                 this.fallSound.play();
-                this.fallSound.volume=0.02;
+                this.fallSound.volume=0.05;
             }
         }
         if(!this.dead&&this.y>GAME_HEIGHT-Floor_Height){
